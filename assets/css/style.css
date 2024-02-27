@@ -1,0 +1,601 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+  background: #fffef8;
+}
+body .main__container {
+  height: 964px;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  max-width: 1440px;
+}
+body main {
+  max-width: 1440px;
+  margin: auto;
+}
+body section {
+  margin: 50px 0;
+}
+body h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+body h1 > span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+body h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+body nav div {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+body nav div a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
+body nav div a img {
+  width: 22px;
+  height: 22px;
+}
+body nav div a:hover {
+  opacity: 0.75;
+}
+body #introduction {
+  display: flex;
+  align-items: center;
+}
+body #introduction figure {
+  flex: 1;
+}
+body #introduction img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+body #introduction article {
+  flex: 1;
+}
+body #introduction h2 {
+  margin-bottom: 1em;
+}
+body #introduction p {
+  margin-bottom: 0.5em;
+}
+body #portfolio .portfolio-header {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+body #portfolio .portfolio-header h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+body #portfolio .portfolio-header #projectModificationButton {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  gap: 8px;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  position: absolute;
+  left: calc(100% + 31px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+body #portfolio .filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body #portfolio .filtersbutton {
+  background-color: white;
+  color: #1d6154;
+  border-color: #1d6154;
+  border-radius: 60px;
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin: 10px;
+  height: 40px;
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+body #portfolio .filtersbutton:hover {
+  background-color: #1d6154;
+  color: white;
+  cursor: pointer;
+}
+body #portfolio .gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+body #portfolio .gallery img {
+  width: 100%;
+}
+body #contact {
+  width: 50%;
+  margin: auto;
+}
+body #contact > * {
+  text-align: center;
+}
+body #contact h2 {
+  margin-bottom: 20px;
+}
+body #contact form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+body #contact form input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+body #contact form label {
+  margin: 2em 0 1em 0;
+}
+body #contact form textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  resize: vertical;
+}
+body #contact form input[type=submit] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+}
+body #contact form input[type=submit]:hover {
+  background-color: #1d6154;
+  color: white;
+  cursor: pointer;
+}
+body #contact form .form__lien {
+  font-size: 14px;
+  color: #3D3D3D;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+body footer {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+}
+body footer nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+body footer nav ul {
+  list-style: none;
+}
+body footer nav ul li {
+  font-size: 14px;
+  color: #000;
+}
+body footer nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+body footer nav ul li a:hover {
+  opacity: 0.75;
+}
+
+.edition-header {
+  background-color: #000;
+  height: 59px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edition-header__content {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  gap: 11px;
+  font-size: 16px;
+}
+
+.containermodals {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+.containermodals .modal-index {
+  background-color: #ffffff;
+  width: 630px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.containermodals .underline {
+  border: solid 1px #b3b3b3;
+  width: 420px;
+  margin-bottom: 38px;
+}
+.containermodals .filtersbutton {
+  background-color: #1d6154;
+  color: white;
+  border-color: #1d6154;
+  border-radius: 60px;
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin-bottom: 45px;
+  height: 36px;
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 237px;
+}
+.containermodals .filtersbutton:hover {
+  background-color: #1d6154;
+  color: white;
+  cursor: pointer;
+}
+.containermodals .close__modal__button {
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.containermodals .close__modal__button i {
+  font-size: 24px;
+}
+.containermodals .title__modal {
+  margin: 60px;
+}
+.containermodals .gallery__modal {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 78px);
+  justify-content: center;
+  gap: 6px;
+  row-gap: 25px;
+  margin-bottom: 67px;
+}
+.containermodals .gallery__modal .gallery-item {
+  position: relative;
+  min-width: 40px;
+  min-height: 66px;
+  width: 100%;
+  max-width: 78px;
+  max-height: 104px;
+  overflow: hidden;
+}
+.containermodals .gallery__modal .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.containermodals .gallery__modal .gallery-item button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+}
+.containermodals .gallery__modal .gallery-item button i {
+  font-size: 10px;
+  color: white;
+}
+.containermodals .modal-add {
+  display: flex;
+  background-color: #ffffff;
+  width: 630px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.containermodals .modal-add .title__modal {
+  color: black;
+  font-weight: 400;
+}
+.containermodals .modal-add .return__modal__button {
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.containermodals .modal-add .return__modal__button .fa-xmark {
+  font-size: 24px;
+}
+.containermodals .modal-add form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.containermodals .modal-add form .image-input-group {
+  background: #e8f1f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 169px;
+  border-radius: 3px;
+  gap: 6px;
+  margin-bottom: 9px;
+}
+.containermodals .modal-add form .image-input-group .image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 129px;
+}
+.containermodals .modal-add form .image-input-group .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.containermodals .modal-add form .image-input-group .image-placeholder i {
+  margin-top: 13px;
+  font-size: 76px;
+  color: #cbd6dc;
+}
+.containermodals .modal-add form .image-input-group .input-file-trigger {
+  position: relative;
+  background: #cbd6dc;
+  border-radius: 50px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #306685;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+.containermodals .modal-add form .image-input-group .input-file-trigger input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 0px;
+}
+.containermodals .modal-add form .image-input-group p {
+  font-size: 10px;
+  margin-bottom: 13px;
+}
+.containermodals .modal-add form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.containermodals .modal-add form .form-group label {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.containermodals .modal-add form .form-group input,
+.containermodals .modal-add form .form-group select {
+  height: 51px;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+  background: white;
+  border: none;
+  padding: 0 8px;
+  outline: none;
+}
+.containermodals .modal-add form .error-message {
+  display: none;
+  color: red;
+  font-size: 10px;
+  text-align: center;
+}
+.containermodals .modal-add form .underline {
+  margin-top: 47px;
+}
+.containermodals .modal-add form button {
+  margin: 0 auto 45px;
+  padding: 14px 0 !important;
+  display: flex;
+  align-items: center;
+  background: #a7a7a7;
+  justify-content: center;
+  border: none;
+  cursor: default;
+}
+.containermodals .modal-add form button:hover {
+  background: #a7a7a7;
+  cursor: default;
+}
+.containermodals .modal-add form button.valid {
+  background: #1d6154;
+  color: white;
+  cursor: pointer;
+}
+.containermodals .modal-add form button.valid:hover {
+  opacity: 0.85;
+}
+
+/*# sourceMappingURL=style.css.map */

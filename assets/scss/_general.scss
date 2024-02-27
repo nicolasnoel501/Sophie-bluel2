@@ -1,0 +1,385 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  // max-width: 1440px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+  background: #fffef8;
+
+  .main__container {
+    height: 964px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1440px;
+  }
+
+  main {
+    max-width: 1440px;
+    margin: auto;
+  }
+  section {
+    margin: 50px 0;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Syne";
+    font-size: 22px;
+    font-weight: 800;
+    color: #b1663c;
+
+    > span {
+      font-family: "Work Sans";
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  h2 {
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 30px;
+    color: #1d6154;
+  }
+
+  nav {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+      a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+        img {
+          width: 22px;
+          height: 22px;
+        }
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+
+  #introduction {
+    display: flex;
+    align-items: center;
+
+    figure {
+      flex: 1;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 80%;
+    }
+
+    article {
+      flex: 1;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+    }
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  #portfolio {
+    .portfolio-header {
+      position: relative;
+      width: fit-content;
+      margin: auto;
+      h2 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      #projectModificationButton {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #000;
+        gap: 8px;
+        font-weight: 400;
+        font-family: "Work Sans", sans-serif;
+        font-size: 14px;
+        position: absolute;
+        left: calc(100% + 31px);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .filters {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .filtersbutton {
+      background-color: white;
+      color: #1d6154;
+      border-color: #1d6154;
+      border-radius: 60px;
+      font-family: "Syne";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      margin: 10px;
+      height: 40px;
+      min-width: 100px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:hover {
+        background-color: #1d6154;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .gallery {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #contact {
+    width: 50%;
+    margin: auto;
+
+    > * {
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      text-align: left;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        height: 50px;
+        font-size: 1.2em;
+        border: none;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+      }
+
+      label {
+        margin: 2em 0 1em 0;
+      }
+
+      textarea {
+        border: none;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        font-family: "Syne";
+        font-weight: 700;
+        color: white;
+        background-color: #1d6154;
+        margin: 2em auto;
+        width: 180px;
+        text-align: center;
+        border-radius: 60px;
+
+        &:hover {
+          background-color: #1d6154;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .form__lien {
+        font-size: 14px;
+        color: #3D3D3D;
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+
+  footer {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    nav {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      ul {
+        list-style: none;
+        li {
+          font-size: 14px;
+          color: #000;
+          a {
+            text-decoration: none;
+            color: #000;
+            &:hover {
+              opacity: 0.75;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.edition-header {
+  background-color: #000;
+  height: 59px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    gap: 11px;
+    font-size: 16px;
+  }
+}

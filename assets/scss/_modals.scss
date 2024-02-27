@@ -1,0 +1,271 @@
+.containermodals {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+
+    .modal-index {
+        background-color: #ffffff;
+        width: 630px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .underline {
+        border: solid 1px #b3b3b3;
+        width: 420px;
+        margin-bottom: 38px;
+    }
+
+    .filtersbutton {
+        background-color: #1d6154;
+        color: white;
+        border-color: #1d6154;
+        border-radius: 60px;
+        font-family: "Syne";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        margin-bottom: 45px;
+        height: 36px;
+        min-width: 100px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 237px;
+
+        &:hover {
+            background-color: #1d6154;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .close__modal__button {
+        display: inline-block;
+        position: absolute;
+        top: 26px;
+        right: 30px;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        i {
+            font-size: 24px;
+        }
+    }
+
+    .title__modal {
+        margin: 60px;
+    }
+
+    .gallery__modal {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 78px);
+        justify-content: center;
+        gap: 6px;
+        row-gap: 25px;
+        margin-bottom: 67px;
+        .gallery-item {
+            position: relative;
+            min-width: 40px;
+            min-height: 66px;
+            width: 100%;
+            max-width: 78px;
+            max-height: 104px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            button {
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                width: 17px;
+                height: 17px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+                border: none;
+                cursor: pointer;
+                i {
+                    font-size: 10px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .modal-add {
+        display: flex;
+        background-color: #ffffff;
+        width: 630px;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        .title__modal {
+            color: black;
+            font-weight: 400;
+        }
+
+        .return__modal__button {
+            display: inline-block;
+            position: absolute;
+            top: 26px;
+            left: 30px;
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            .fa-xmark {
+                font-size: 24px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+
+            .image-input-group {
+                background: #e8f1f6;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 169px;
+                border-radius: 3px;
+                gap: 6px;
+                margin-bottom: 9px;
+
+                .image-placeholder {
+                    // div contenant l'image de preview
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 129px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                    i {
+                        margin-top: 13px;
+                        // icone de l'image de preview
+                        font-size: 76px;
+                        color: #cbd6dc;
+                    }
+                }
+                .input-file-trigger {
+                    // bouton pour ajouter une image
+                    position: relative;
+                    background: #cbd6dc;
+                    border-radius: 50px;
+                    padding: 10px 16px;
+                    font-size: 14px;
+                    color: #306685;
+                    font-weight: 500;
+                    text-align: center;
+                    cursor: pointer;
+                    input {
+                        // input pour ajouter une image
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        cursor: pointer;
+                        font-size: 0px;
+                    }
+                }
+                p {
+                    // texte en dessous du bouton pour ajouter une image
+                    font-size: 10px;
+                    margin-bottom: 13px;
+                }
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                label {
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+                input,
+                select {
+                    height: 51px;
+                    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+                    background: white;
+                    border: none;
+                    padding: 0 8px;
+                    outline: none;
+                }
+            }
+
+            .error-message {
+                display: none;
+                color: red;
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .underline {
+                margin-top: 47px;
+            }
+
+            button {
+                margin: 0 auto 45px;
+                padding: 14px 0 !important;
+                display: flex;
+                align-items: center;
+                background: #a7a7a7;
+                justify-content: center;
+                border: none;
+                cursor: default;
+                &:hover {
+                    background: #a7a7a7;
+                    cursor: default;
+                }
+                &.valid {
+                    background: #1d6154;
+                    color: white;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
+            }
+        }
+    }
+}
