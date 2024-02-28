@@ -381,10 +381,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const checkImage = (file) => {
     // On vérifie si le fichier est bien une image
     // Types : image/png, image/jpeg
-    if (!file.type.includes('image/png') || !file.type.includes('image/jpeg')) {
-      alert("Le fichier doit être une image au format PNG ou JPEG")
+    console.log("Type de fichier:", file.type);
+
+    if (!(file.type.includes('image/png') || file.type.includes('image/jpeg'))) {
+      alert("Le fichier doit être une image au format PNG ou JPEG");
       return false;
     }
+    
+    
 
     // On vérifie si la taille du fichier est inférieure à 4Mo
     if (file.size >= 4 * 1024 * 1024) {
