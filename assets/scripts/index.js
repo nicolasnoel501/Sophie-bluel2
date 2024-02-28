@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     // On vérifie si la taille du fichier est inférieure à 4Mo
-    if (file.size >= 4 * 1024 * 1024) {
+    if (file.size > 4 * 1024 * 1024) {
       alert("Le fichier ne doit pas dépasser 4Mo")
       return false;
     }
